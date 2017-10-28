@@ -1,0 +1,107 @@
+{% extends "base_login.html" %}
+{% load static %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+  <script src="{% static '/vendor/typeahead/typeahead.jquery.min.js' %}"></script>
+  <script src="{% static '/vendor/typeahead/bloodhound.min.js' %}"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <meta name="keywords" content="login, signin">
+
+    <title>MyEmunshi</title>
+
+    Fonts
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">
+
+   
+    Styles
+    <link href="{% static 'css/core.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/app.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+
+    Favicons
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="icon" href="{% static 'img/favicon.png' %}">
+
+  </head>
+
+
+  <body class="  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+
+
+    <div class="row no-gutters min-h-fullscreen bg-white">
+      <div class="col-md-6 col-lg-7 col-xl-8 d-none d-md-block bg-img" style="{% static 'background-image: url(img/preview/user-login-3.png)' %}" data-overlay="7"> -->
+{% block content %}
+        <div class="row h-100 pl-50">
+          <div class="col-md-10 col-lg-8 align-self-end">
+            <img src="{% static 'img/bg/nov_1.jpg' %}" alt="...">
+            <br><br><br>
+            <h4 class="text-white">Welcome To MyEmunshi Registeraion</h4>
+            <br><br>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="col-md-6 col-lg-5 col-xl-4 align-self-center">
+        <div class="px-80 py-30">
+          <h2>Register Account</h2>
+          <p>All fields are mandatory*</p>
+          <br>
+      
+
+          <form action="/registeration/" method ='post' enctype="multipart/form-data">
+
+      {%csrf_token%}
+                 
+                    <div class="form-group">
+                        {{form.as_p}}
+                    </div>
+
+            
+
+            <div class="form-group flexbox">
+              <label class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" checked="">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">I agree to terms & conditions</span>
+              </label>
+
+             
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-bold btn-block btn-primary" type="submit">Login</button>
+            </div>
+          </form>
+
+          <div class="divider">Or Sign In With</div>
+          <div class="text-center">
+            <a class="btn btn-square btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+            <a class="btn btn-square btn-google" href="#"><i class="fa fa-google"></i></a>
+            <a class="btn btn-square btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+
+          <hr class="w-30px">
+
+          <p class="text-center text-muted fs-13 mt-20">Don't have an account? <a class="text-primary fw-500" href="#">Sign up</a></p>
+        </div>
+      </div>
+    </div>
+</form>
+
+
+
+
+
+
+{% endblock %} 
+
+

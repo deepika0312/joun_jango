@@ -1,0 +1,134 @@
+ {% load static %}
+ <!-- Sidebar -->
+   <aside class="sidebar sidebar-icons-right sidebar-icons-boxed sidebar-expand-lg">
+      <header class="sidebar-header">
+        MyEmunshi
+        <!--<a class="logo-icon" href="{% url 'index' %}"><img src="{% static 'img/logo-icon-light.png' %}" alt="logo icon"></a> 
+        <span class="logo">
+          <a href="{% url 'index' %}"><img src="{% static 'img/logo-light.png' %}" alt="logo"></a>
+        </span> -->
+        <span class="sidebar-toggle-fold"></span>
+      </header>
+
+      <nav class="sidebar-navigation">
+        <ul class="menu">
+
+          <li class="menu-category">Home</li>
+
+          <li class="menu-item">
+            <a class="menu-link" href="{% url 'index' %}">
+              <span class="icon fa fa-home"></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-link" href="#">
+              <span class="icon fa fa-tv"></span>
+              <span class="title">Add New Case</span>
+              <span class="arrow"></span>
+            </a>
+
+            <ul class="menu-submenu">
+              <li class="menu-item">
+                <a class="menu-link" href="{% url 'supreme_details' %}">
+                  <span class="dot"></span>
+                  <span class="title">Supreme Court</span>
+                </a>
+              </li>
+
+              <li class="menu-item">
+                <a class="menu-link" href="{% url 'highcourtdetails' %}">
+                  <span class="dot"></span>
+                  <span class="title">High Court</span>
+                </a>
+              </li>
+
+              <li class="menu-item">
+                <a class="menu-link" href="{% url 'districtcourtdetails' %}">
+                  <span class="dot"></span>
+                  <span class="title">District Court</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+
+          <li class="menu-category">Work</li>
+
+
+          <li class="menu-item">
+            <a class="menu-link" href="{% url 'calendar' %}">
+              <span class="icon ti-layout"></span>
+              <span class="title">Calendar</span>
+              <span class="arrow"></span>
+            </a>
+          </li>
+
+
+          <li class="menu-item">
+            <a class="menu-link" href="{% static '#' %}">
+              <span class="icon fa fa-align-left"></span>
+              <span class="title">Tasks</span>
+              <span class="arrow"></span>
+            </a>
+
+           
+          </li>
+
+
+          <li class="menu-item">
+            <a class="menu-link" href="{% static '#' %}">
+              <span class="icon fa fa-plus-circle"></span>
+              <span class="title">Invoice</span>
+              <span class="arrow"></span>
+            </a>
+
+          
+          </li>
+
+
+          <li class="menu-item">
+            <a class="menu-link" href="{% static '#' %}">
+              <span class="icon ti-ruler-pencil"></span>
+              <span class="title">Expense</span>
+              <span class="arrow"></span>
+            </a>
+
+           
+          </li>
+
+
+          <li class="menu-item">
+            <a class="menu-link" href="{% static '#' %}">
+              <span class="icon fa fa-check-square"></span>
+              <span class="title">INCOME</span>
+              <span class="arrow"></span>
+            </a>
+
+            
+          </li>
+
+
+          <li class="menu-item">
+            <a class="menu-link" href="{% static '#' %}">
+              <span class="icon fa fa-pie-chart"></span>
+              <span class="title">Timer</span>
+              <span class="arrow"></span>
+            </a>
+
+            
+          </li>
+
+
+
+
+         
+
+
+        </ul>
+      </nav>
+
+    </aside>
+    <!-- END Sidebar -->

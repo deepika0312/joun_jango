@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+  <div class="col-lg-4">
+        <button class="btn btn-primary active" data-toggle="button">District Court</button>
+
+        <hr class="d-lg-none">
+      </div>
+
+        <div class="card">
+          <h4 class="card-title"><strong>Search Your Case</strong></h4>
+
+          <form data-provide="validation" data-disable="false" novalidate="true">
+            <div class="card-body">
+
+
+              <div class="form-group">
+                      <label for="select">State</label>
+                      <select class="form-control" id="select">
+                        <option>Delhi</option>
+                        <option>Noida</option>
+                        <option>Gurgaon</option>
+                      </select>
+                    </div>
+
+            <div class="form-group">
+                      <label for="select">Case Type</label>
+                      <select class="form-control" id="select">
+                        
+                      </select>
+                    </div>
+
+              <div class="form-group">
+                      <label for="select">Case Type</label>
+                      <select class="form-control" id="select">
+                        
+                      </select>
+                    </div>
+
+              <div class="form-group">
+                      <label class="require" for="input-required">Case Number</label>
+                      <input type="text" class="form-control" id="input-required">
+                    </div>
+
+
+              <div class="form-group">
+                      <label class="require" for="input-required">Year</label>
+                      <input type="text" class="form-control" id="input-required">
+                    </div>
+
+
+
+
+
+              
+
+            </div>
+
+
+            <footer class="card-footer text-right">
+              <button class="btn btn-primary" type="submit">Search</button>
+            </footer>
+
+
+          </form>
+        </div>
+ {% endblock %} 

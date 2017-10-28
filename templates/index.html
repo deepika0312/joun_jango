@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+ <div class="row">
+         <div class="col-md-4">
+            <div class="card card-body">
+              <div class="flexbox">
+                <div data-provide="sparkline" data-width="100" data-fill-color="false" data-line-width="2">1,4,3,7,6,4,8,9,6,8,12</div>
+                <div class="text-right">
+                  <span class="fw-400">Total Cases</span><br>
+                  <span>
+                    <i class="ti-angle-up text-success"></i>
+                    <span class="fs-18 ml-1">113</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="card card-body">
+              <div class="flexbox">
+                <div data-provide="sparkline" data-type="bar" data-bar-color="#f2a654">1,4,7,6,4,8,6,12</div>
+                <div class="text-right">
+                  <span class="fw-400">Pending Cases</span><br>
+                  <span>
+                    <i class="ti-angle-up text-success"></i>
+                    <span class="fs-18 ml-1">%80</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="card card-body">
+              <div class="flexbox">
+                <div data-provide="sparkline" data-type="discrete" data-width="50" data-line-color="#926dde">1,4,3,7,6,4,8,9,6,8,12</div>
+                <div class="text-right">
+                  <span class="fw-400">Disposed Cases</span><br>
+                  <span>
+                    <i class="ti-angle-up text-success"></i>
+                    <span class="fs-18 ml-1">%80</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="lookup">
+  <input type="text" placeholder="Search...">
+</form>
+ <div class="col-12">
+{% for x in '12345' %}
+   
+
+        
+          <!-- Default -->
+
+         <div class="card">
+
+                <div class="contents contents_respo" ng-click="showDetailsButton(case,'d')">
+                    <div style="font-size:15px" class="ng-binding"><span class="case_title">Case No: &nbsp;&nbsp;</span>210186</div>
+                    <div style="font-size:15px" class="ng-binding"><span class="case_title">Case Year: &nbsp;&nbsp;</span>2016</div>
+                    <div style="font-size:15px" class="ng-binding"><span class="case_title">Case Type: &nbsp;&nbsp;</span>CS DJ - CIVIL SUIT FOR DJ ADJ</div>
+                </div>
+
+                <div class="contents caseNo contents_respo" ng-click="showDetailsButton(case,'d')">
+                    <div style="font-size:15px" class="ng-binding"><span class="case_title">Court Name: &nbsp;&nbsp;</span> District and Sessions Judge, South-East , Saket</div>
+                    <div style="font-size:15px" class="ng-binding"><span class="case_title">Party's: &nbsp;&nbsp;</span>1. SUMIT AWASTHY  AN... <b>Vs</b> 1. SACHIN SARIN  ANR...</div>
+                    <div style="margin-top: -12px;">
+                        <h5 style="font-size: 18px;text-align: center;" class="ng-binding"></h5>
+                    </div>
+                </div>
+                <!-- <div class="img_hold">
+                    <i class="fa fa-trash-o" aria-hidden="true" id="del_img" ng-click="deleteCase(case,'d')"></i>
+                </div>
+                <div class="text-center date-body" ng-click="showDetailsButton(case,'d')">
+                    <label for="" class="date-title ng-binding">November</label>
+                    <div class="date-content">
+                      <span class="ion-calendar"></span>
+                        <p class="dia ng-binding">16</p>
+                        <hr class="nomargin">
+                        <p class="nomargin"><strong class="ng-binding">2017</strong></p>
+
+                    </div>
+                </div> -->
+
+      
+        </div>  
+         </div>
+
+{% endfor %}
+
+         <!--  <div class="col-lg-6">
+            <div class="card">
+              <h4 class="card-title"><strong>Case History</strong></h4>
+
+              <div class="flexbox mb-20">
+                  <div class="lookup">
+                    <input class="w-200px" type="text" name="s" placeholder="Search">
+                  </div>
+
+                  <div class="btn-toolbar">
+                    <div class="btn-group btn-group-sm">
+                      <button class="btn" title="" data-provide="tooltip" data-original-title="Refresh"><i class="ion-refresh"></i></button>
+                      <button class="btn" title="" data-provide="tooltip" data-original-title="Add new"><i class="ion-plus-round"></i></button>
+                    </div>
+
+                    <div class="btn-group btn-group-sm ml-2 d-none d-sm-flex">
+                      <button class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Export</button>
+                      <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" x-out-of-boundaries="" style="position: absolute; top: 3179px; left: 0px; will-change: top, left;">
+                        <a class="dropdown-item" href="#">CSV</a>
+                        <a class="dropdown-item" href="#">SQL</a>
+                        <a class="dropdown-item" href="#">PDF</a>
+                        <a class="dropdown-item" href="#">Text</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="card-body">
+                <table class="table table-separated">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Case No</th>
+                      <th>Case Year</th>
+                      <th>Case Type</th>
+                      <th>Court Name</th>
+                      <th>Party's Involved</th>
+                      <th class="text-center w-100px">Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>876786</td>
+                      <td>2016</td>
+                      <td>CS DJ - CIVIL SUIT FOR DJ ADJ</td>
+                      <td>District and Sessions Judge, South-East , Saket</td>
+                      <td>SUMIT AWASTHY ANR and SACHIN SARIN ANR</td>
+
+                      <td class="text-right table-actions">
+                        <a class="table-action hover-primary" href="#"><i class="ti-pencil"></i></a>
+                        <a class="table-action hover-danger" href="#"><i class="ti-trash"></i></a>
+                        <div class="dropdown table-action">
+                          <span class="dropdown-toggle no-caret hover-primary" data-toggle="dropdown"><i class="ti-more-alt rotate-90"></i></span>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"><i class="ti-menu-alt"></i> Details</a>
+                            <a class="dropdown-item" href="#"><i class="ti-clip"></i> Add file</a>
+                            <a class="dropdown-item" href="#"><i class="ti-bar-chart"></i> Performance</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+               
+                  </tbody>
+
+
+                </table>
+
+                <nav>
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#">
+                        <span class="ti-arrow-left"></span>
+                      </a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">
+                        <span class="ti-arrow-right"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div> -->
+          </div>
+        
+        </div>
+ {% endblock %} 
